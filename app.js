@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
   // get all todos
   Todo.find()
     .lean()
+    .sort({ _id: 'asc' })
     .then(todos => res.render('index', { todos: todos }))
     .catch(error => console.error(error))
 })
