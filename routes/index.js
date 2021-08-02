@@ -9,5 +9,8 @@ router.use('/', home)
 const todos = require('./modules/todos')
 router.use('/todos', todos)
 
+const users = require('./modules/users')
+router.use('/users', users)
+
 // 匯出路由器
 module.exports = router
